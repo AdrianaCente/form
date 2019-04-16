@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact form</title>
+		<style>
+			form {
+				box-sizing: border-box;
+				border: 1px solid black;
+				border-radius: 2px;
+				margin: 30px auto 40px auto;
+				padding: 60px 0 20px 20px;
+				width: 70%;
+				overflow: auto;
+			}
+			#imgContact {
+				float: right;
+				height: 370px;
+				width: 450px;
+			}
+			[type="text"] {
+				border: 1px solid black;
+				border-radius: 3px;
+				width: 35%;
+				margin-left: 80px;
+				line-height: 1.5;
+				padding-left: 4px;
+			}
+			#rowG>p {
+				margin: 0 auto 0 80px;
+			}
+			[type="radio"] {
+				margin-left: 150px;
+			}
+			#textArea {
+				width: 35%;
+				height: 120px;
+				border: 1px solid black;
+				border-radius: 3px;
+				margin-left: 80px;
+				font-family: arial;
+			}
+			[type="submit"] {
+				float: right;
+				margin-right: 50px;
+				margin-top: 20px;
+				padding: 5px;
+				color: white;
+				background-color: #009999;
+				border: 1px solid #009999;
+				border-radius: 3px;
+			}
+			#divOne p {
+				display: none;
+			}
+			.closebtn {
+				margin-left: 15px;
+				color: green;
+				font-weight: bold;
+				float: right;
+				font-size: 22px;
+				line-height: 20px;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+			.closebtn:hover {
+				color: black;
+			}
+			#divOne {
+				visibility: hidden;
+				width: 70%;
+				margin: 40px auto 0 auto;;
+				box-sizing: border-box;
+				padding: 20px;
+				background-color: #b3ffb3;
+				color: green;
+			}
+			#bif {
+				color: #b3ffb3;
+				border-radius:50%;
+				background-color:green; 
+				padding:7px 2px 7px 9px;
+			}
+			.styleRed {
+				border: 2px solid red;
+			}  
+
+		</style>
+	</head>
+	<body>
+		<div id="divOne">
+			<span id="bif">&check;&nbsp;&nbsp;&nbsp;</span><span class="closebtn" onclick="body.firstElementChild.style.visibility='hidden'">&times;</span>
+		</div>
+		<form name="myForm" id="myForm" action="#" method="post" onSubmit="return myValidation();">
+			
+			<img src="Contact1.jpg" id="imgContact" />
+			
+			<div class="rowF">
+				<input type="text" id="fName" name="fname" class="oneClass" placeholder="First Name" autocomplete="off" />
+			</div>
+			<br />
+			
+			<div class="rowL">
+				<input type="text" id="lName" class="oneClass" placeholder="Last Name" autocomplete="off" />
+			</div>
+			<br />
+			
+			<div id="rowG">
+				<p>Gender</p>
+				<div id="one">
+					<input type="radio" id="mGender" name="gender" value="male" /><label for="mGender">M</label>
+					<br />
+					<input type="radio" id="fGender" name="gender" value="female" /><label for="fGender">F</label>
+				</div>
+			</div>
+			<br />
+			
+			<div class="rowT">
+				<textarea id="textArea" class="oneClass" ></textarea>
+			</div>
+			
+			<div class="rowS">
+				<input type="submit" id="submitBtn" value="Submit" />
+			</div>
+		</form>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="scriptbun.js"></script>
+	</body>
+</html>
